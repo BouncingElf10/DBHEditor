@@ -1,0 +1,22 @@
+[package]
+name = "DBHEditor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+flate2 = "1.0"
+eframe = "0.31"
+rfd = "0.15"
+
+[lib]
+name = "dbheditor"
+path = "src/lib.rs"
+
+[[bin]]
+name = "DBHEditor"
+path = "src/main.rs"
+
+# Dev-only inspector for the raw save format (decompress + hexdump).
+[[bin]]
+name = "analyze"
+path = "src/bin/analyze.rs"
